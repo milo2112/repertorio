@@ -1,0 +1,20 @@
+{
+  "name": "repertorio",
+  "version": "1.0.0",
+  "description": "Repositorio de código para entrega desafio usando Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milo2112/repertorio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milo2112/repertorio/issues"
+  },
+  "homepage": "https://github.com/milo2112/repertorio#readme"
+}
