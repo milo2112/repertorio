@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/milo2112/repertorio/issues"
   },
-  "homepage": "https://github.com/milo2112/repertorio#readme"
+  "homepage": "https://github.com/milo2112/repertorio#readme",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+
+  "eslintConfig": {
+	  "extends": "./node_modules/standard/eslintrc.json"
+  }
 }
