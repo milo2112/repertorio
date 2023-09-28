@@ -4,6 +4,8 @@
   "description": "Repositorio de código para entrega desafio usando Express",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node run app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
