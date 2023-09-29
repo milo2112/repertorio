@@ -9,7 +9,7 @@ const setSongs = (songs) => {
 }
 
 const createSong = (song) => {
-  const songs = readSongs()
+  const songs = getSongs()
   songs.push(song)
   setSongs(songs)
   return 'Canción agregada...'
@@ -19,13 +19,14 @@ const readSongs = () => getSongs()
 
 const updateSong = (id, modifySong) => {
   id = Number(id)
-  const songsRetrieved = getSongs()
-  const indexSong = songsRetrieved.findIndex((song) => song.id === id)
-  songsRetrieved[indexSong] = {
+  const retrievedSongs = getSongs()
+  console.log(retrievedSongs)
+  const indexSong = retrievedSongs.findIndex((song) => song.id === id)
+  retrievedSongs[indexSong] = {
     id,
     ...modifySong
   }
-  setSongs(songsRetrieved)
+  setSongs(retrievedSongs)
 }
 
 module.exports = {

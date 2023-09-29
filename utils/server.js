@@ -1,7 +1,7 @@
 require('dotenv').config()
 const fs = require('fs')
 const express = require('express')
-const { readSongs, updateSong, createSong } = require('./crud')
+const { readSongs, updateSong, createSong, deleteSong } = require('./crud')
 
 const PORT = process.env.PORT ?? 3000
 
@@ -25,6 +25,8 @@ app.get('/canciones', (_, res) => res.status(200).json(readSongs()))
 app.post('/canciones', (req, res) => res.status(201).send(createSong(req.body)))
 
 app.put('/canciones/:id', (req, res) => res.status(200).json(updateSong(req.params.id, req.body)))
+
+app.delete('/canciones/:id', (req, res) => res.status(200).json(deleteSong(req.params.id, req.body)))
 
 app.all('*', (_, res) => res.status(404).json({ code: 404, message: 'Page not found...' }))
 
